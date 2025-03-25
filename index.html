@@ -16,13 +16,12 @@
             padding: 10px;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
-            width: 70%;
+            width: 80%;
             margin: 0 auto;
         }
 
         .container {
             display: flex;
-            
             background-color: white;
             flex-wrap: wrap; 
         }
@@ -31,12 +30,14 @@
             background-color: #0ca098;
             color: white;
             text-align: center;
-            width: 50%;
+            width: 30%;
+            flex-direction: column-reverse;
         }
 
         .bloque-azul-oscuro {
             background-color: #13146171;
             padding: 20px;
+            flex-direction: column-reverse;
         }
 
         .imagen {
@@ -56,8 +57,9 @@
 
         .columna {
             padding: 20px;
-            width: 50%;
+            width: 60%;
             color: white;
+            display: column-reverse;
         }
 
         .columna h2,
@@ -143,20 +145,21 @@
             color: white;
         }
 
-        @media (min-width: 600px) {
-            .container {
-                flex-wrap: nowrap; 
-            }
-            .bloque-azul {
-                width: 30%;
-            }
-            .columna {
-                width: 70%;
-            }
-            .informacion {
-                width: 100%;
-            }
-        }
+        @media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse; /* Invierte el orden solo en pantallas pequeñas */
+    }
+
+    .bloque-azul {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+    }
+
+    .columna {
+        width: 100%; /* Asegura que el contenido también ocupe todo el ancho */
+    }
+}
+
     
     </style>
 </head>
